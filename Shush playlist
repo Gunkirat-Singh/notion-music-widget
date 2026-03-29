@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <style>
         body {
@@ -12,23 +12,30 @@
             height: 100vh;
             overflow: hidden;
         }
-        /* This makes the player fit perfectly in your Notion sidebar */
-        .video-container {
+        /* This makes the player look like a clean "Art" block */
+        .player-wrapper {
+            position: relative;
             width: 100%;
             height: 100%;
+            border-radius: 12px; /* Matches Notion's rounded corners */
+            overflow: hidden;
         }
         iframe {
-            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PLuXBepVDtfVDfj6bYU3jb5f0bdqE-ljVU&color=white&modestbranding=1&rel=0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
+    <div class="player-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/videoseries?list=PLuXBepVDtfVDfj6bYU3jb5f0bdqE-ljVU&modestbranding=1&rel=0&showinfo=0&color=white" 
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
         </iframe>
     </div>
 </body>
